@@ -4,9 +4,12 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+
+	"github.com/go-chi/chi/v5"
 )
 
 func main() {
+	router := chi.NewRouter()
 	server := &http.Server{
 		Addr:    ":3000",
 		Handler: http.HandlerFunc(basicHandler),
