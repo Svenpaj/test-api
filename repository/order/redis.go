@@ -113,7 +113,7 @@ func (r *RedisRepo) Update(ctx context.Context, order model.Order) error {
 
 type FindAllPage struct {
 	Size   uint
-	Offset uint
+	Offset uint64
 }
 
 type FindResult struct {
